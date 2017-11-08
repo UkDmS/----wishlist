@@ -31,11 +31,6 @@ model/product.php
 
     public function getParentCategories($category_id) {
         $query = $this->db->query("SELECT parent_id FROM " . DB_PREFIX . "category WHERE " . DB_PREFIX . "category.category_id = '" . (int)$category_id . "'");
-        if(!empty($query->row['parent_id']))
-        {
-            $a = $this->getParentCategories($query->row['parent_id']);
-            $seo = $this->getSeoUrlCategory($query->row['parent_id']);
-        }
         return $query->row['parent_id'];
 	}
     public function buildTree($category_id)
