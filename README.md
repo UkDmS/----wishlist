@@ -1,5 +1,5 @@
 # чпу wishlist
-controler/footer.php
+controller/common/footer.php
 
             $i = 0;
 
