@@ -49,6 +49,7 @@ model/product.php
             }
 
         }
+	$tree = array_reverse($tree);   
         $path = implode("/",$tree);
         return $path;
     }
